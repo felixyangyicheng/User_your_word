@@ -25,9 +25,9 @@ public class LoginController {
 	}
 
 	@PostMapping
-	public String login(@RequestParam String username, HttpSession session, Model model ) {
+	public String login(@RequestParam String sessionId, HttpSession session, Model model ) {
 
-		if(username.isEmpty()||username.isBlank()) {
+		if(sessionId.isEmpty()||sessionId.isBlank()) {
 
 			model.addAttribute("error", true);
 			
@@ -35,15 +35,8 @@ public class LoginController {
 		}
 		else {
 			
-		session.setAttribute("utilisateurSession", username);
-		System.out.println(username);
-		return "redirect:/welcome";
+		session.setAttribute("SessionId", sessionId);
+		return "redirect:/gameInterface";
 		}
 	}
-//	@PostMapping("/login")
-//	public String post(@RequestParam(username = "name") String username) {
-//
-//
-//		return content;
-//	}
 }

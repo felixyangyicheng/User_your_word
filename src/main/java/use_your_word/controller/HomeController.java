@@ -14,36 +14,24 @@ import use_your_word.request.UtilisateurRequest;
 @Controller // on demande à spring de la manager en tant que Controller web
 public class HomeController {
 	//@RequestMapping("/welcome")
-	@GetMapping("/welcome")
+	@GetMapping("/gameInterface")
 //	public String Welcome(HttpSession session,@RequestParam String username, @RequestParam(required=false)Integer id, Model model) {
 //		
 //		model.addAttribute("utilisateurSession", username);
 ////		return "/WEB-INF/views/welcome.jsp";
 //		return "welcome";
 //	}
-	public String Welcome(HttpSession session) {
-		
-	
-		if(session.getAttribute("utilisateurSession")==null) {
+	public String gameInterface(HttpSession session) {
+		if(session.getAttribute("sessionId")==null) {
 			return "redirect:/login";
 		}
 		
 	
-		return "welcome";
+		return "gameInterface";
 	}
-	
-	@GetMapping("/welcome-binding")
-	
-	public String welcomeBinding(UtilisateurRequest utilisateurRequest) {
-		
-		System.out.println(utilisateurRequest.getUsername());
-		System.out.println(utilisateurRequest.getId());
-		return "welcome";
-	}
-	
-	@GetMapping("/welcome/{username}")
-	public String welcomePathVariable(@PathVariable String username, Model model) {
-		model.addAttribute("utilisateurSession", username);
-		return "welcome";
+	@GetMapping("/gameInterface/{sessionId}")
+	public String gameInterfacePathVariable(@PathVariable String sessionId, Model model) {
+		model.addAttribute("sessionId", sessionId);
+		return "gameInterface";
 	}
 }
