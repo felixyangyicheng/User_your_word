@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
 <!-- <form>
   Email input
   <div class="form-outline mb-4">
