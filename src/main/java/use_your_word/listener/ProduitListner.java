@@ -1,4 +1,4 @@
-package fr.formation.listener;
+package use_your_word.listener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
-import fr.formation.model.Produit;
+import use_your_word.model.Produit;
 
 public class ProduitListner implements ServletContextListener{
 

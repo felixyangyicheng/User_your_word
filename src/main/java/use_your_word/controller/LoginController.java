@@ -1,4 +1,4 @@
-package fr.formation.controller;
+package use_your_word.controller;
 
 import java.io.PrintWriter;
 import java.util.Map;

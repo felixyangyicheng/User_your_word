@@ -1,4 +1,4 @@
-package fr.formation.model;
+package use_your_word.model;
 
 public class Produit {
 

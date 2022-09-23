@@ -1,4 +1,4 @@
-package fr.formation.config;
+package use_your_word.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

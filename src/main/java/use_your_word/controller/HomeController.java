@@ -1,4 +1,4 @@
-package fr.formation.controller;
+package use_your_word.controller;
 
 import javax.servlet.http.HttpSession;
 
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import fr.formation.request.UtilisateurRequest;
+import use_your_word.request.UtilisateurRequest;
 
 @Controller // on demande à spring de la manager en tant que Controller web
 public class HomeController {

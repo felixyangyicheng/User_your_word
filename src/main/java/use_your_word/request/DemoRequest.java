@@ -1,4 +1,4 @@
-package fr.formation.request;
+package use_your_word.request;
 
 public class DemoRequest {
 	private String demo;
